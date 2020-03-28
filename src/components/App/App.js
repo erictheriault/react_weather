@@ -39,15 +39,12 @@ export default class App extends React.Component {
     return (
       <div className="App">
         <form onSubmit={this.onZipSubmitted}>
-          <label>
-            Zip code:
-            <input
-              type="text"
-              value={this.state.zipCode}
-              onChange={this.onZipChanged}
-            />
-          </label>
-          <input type="submit" value="Submit" />
+          <input
+            type="text"
+            value={this.state.zipCode}
+            onChange={this.onZipChanged}
+          />
+          <input type="submit" value="Get Weather" />
         </form>
         <Weather weather={this.state.weather} />
       </div>

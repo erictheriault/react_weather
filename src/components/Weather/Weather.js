@@ -1,5 +1,4 @@
 import React from 'react';
-import './Weather.css';
 
 export default class Weather extends React.Component {
   render() {
@@ -8,13 +7,13 @@ export default class Weather extends React.Component {
     if (weather) {
       return (
         <div className="Weather">
-          <h3>Weather for {weather.city}</h3>
+          <h2>Weather for {weather.city}</h2>
           <p>Conditions: {weather.description}</p>
           <p>Temp (F): {weather.temperature}</p>
         </div>
       );
     }
 
-    return null;
+    return <p>Enter your zip code</p>;
   }
 }
